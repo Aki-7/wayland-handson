@@ -14,13 +14,16 @@ int main()
 
   socket = wl_display_add_socket_auto(display);
   if (socket == NULL)
-    goto out;
+    goto out_socket;
 
   fprintf(stderr, "socket: %s\n", socket);
 
   wl_display_run(display);
 
   ret = EXIT_SUCCESS;
+
+out_socket:
+  wl_display_destroy(display);
 
 out:
   return ret;
