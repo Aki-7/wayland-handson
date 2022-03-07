@@ -3,7 +3,8 @@ dep_wayland_handson_server = [
 ]
 
 srcs_wayland_handson_server = [
-  'main.c'
+  'main.c',
+  'compositor.c',
 ]
 
 executable(
